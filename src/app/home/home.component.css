@@ -3,6 +3,14 @@
     background-size: cover;
 }
 
-.fontBlanc {
-    
+.fondHeros {
+    background-color: rgba(96, 194, 240, 0.5);
+}
+
+.fondMechant {
+    background-color: rgba(240, 113, 96, 0.5);
+}
+
+.fondJoueur {
+    background-color: rgba(245, 245, 245, 0.5);
 }

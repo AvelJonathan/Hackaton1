@@ -4,7 +4,7 @@
 
       <!-- Colone heros de gauche Heros 1-6 -->
       <!-- Ligne 1 -->
-      <div class="col-4 fondBlanc">
+      <div class="col-4 fondHeros">
         <div class="row">
           <div class="col-4 ">
             <img class="img-fluid" src="{{ heroes[2].images.sm }}">
@@ -38,7 +38,7 @@
       </div>
 
       <!-- Colonne heros selectionner Joeur 1-->
-      <div class="col-4">
+      <div class="col-4 fondJoueur">
         <div class="row ">
           <div class="col-12 ">
             <p>HeroPlayer1</p>
@@ -48,7 +48,7 @@
 
       <!-- Colonne Mechant droite 1-6 -->
       <!-- Ligne 1 -->
-      <div class="col-4">
+      <div class="col-4 fondMechant">
         <div class="row">
           <div class="col-4 ">
             <img class="img-fluid" src="{{ heroes[35].images.sm }}">
@@ -83,7 +83,7 @@
 
 
       <!-- Colone heros de gauche Heros 7-12 -->
-      <div class="col-4">
+      <div class="col-4 fondHeros">
         <!-- Ligne-3 -->
         <div class="row ">
           <div class="col-4">
@@ -118,7 +118,7 @@
       </div>
 
       <!-- Colonne heros selectionner Joeur 2-->
-      <div class="col-4">
+      <div class="col-4 fondJoueur">
         <div class="row ">
           <div class="col-12 ">
             <p>HeroPlayer2</p>
@@ -127,7 +127,7 @@
       </div>
 
       <!-- Colonne Mechant droite 7-12 -->
-      <div class="col-4">
+      <div class="col-4 fondMechant">
         <!-- Ligne 3 -->
         <div class="row">
           <div class="col-4 ">
@@ -162,5 +162,7 @@
       </div>
     </div>
   </div>
-  <button routerLink="/fight">Lancer le combat !</button>
+  <div class="buttonStart">
+    <button routerLink="/fight" style="margin: auto;display: block;">Lancer le combat !</button>
+  </div>
 </div>
