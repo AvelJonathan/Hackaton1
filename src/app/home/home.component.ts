@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Player } from '../models/player';
 
 @Component({
   selector: 'app-home',
@@ -13,3 +14,7 @@ export class HomeComponent implements OnInit {
   }
 
 }
+
+const player = new Player();
+player.name = Math.floor(Math.random() * 2);
+console.log(player);
