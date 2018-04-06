@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Player } from '../models/player';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-fight',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FightComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  heroes;
+  constructor(private http: HttpClient) {
   }
-
+  ngOnInit(): void {
+    this.http.get('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json').subscribe(heroes => {
+      this.heroes = heroes;
+    });
+  }
 }

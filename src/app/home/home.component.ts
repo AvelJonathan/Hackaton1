@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Player } from '../models/player';
 import { HttpClient } from '@angular/common/http';
+import { ApiService } from './../api.service';
 
 @Component({
   selector: 'app-home',
@@ -9,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class HomeComponent implements OnInit {
+
   heroes;
   constructor(private http: HttpClient) {
   }
@@ -18,8 +20,3 @@ export class HomeComponent implements OnInit {
     });
   }
 }
-
-const player = new Player();
-player.name = Math.floor(Math.random() * 1000);
-console.log(player);
-
