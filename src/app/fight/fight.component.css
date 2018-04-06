@@ -1,20 +1,22 @@
+.superHero {
+    background: url(http://cdn1-www.superherohype.com/assets/uploads/2013/11/JLSH.jpg);
+    background-size: cover;
+}
 
 .player1 {
-    padding-top: 10%;
+    padding-top: 50%;
     padding-left: 10%;
 }
 
 .player2 {
-    padding-top: 10%;
+    padding-top: 50%;
     padding-left: 20%;
 }
 .vs {
-    padding-top: 10%;
+    padding-top: 50%;
     padding-left: 15%;
 }
 
-.border {
-    border-style: solid;
-    border-width: 5px;
-    color: black;
+.margin {
+    padding-bottom: 25%;
 }

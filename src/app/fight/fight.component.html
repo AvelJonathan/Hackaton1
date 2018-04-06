@@ -1,26 +1,31 @@
-<div class="container-fluid">
-  <div class="border">
-    <div>
+<div class="container-fluid superHero">
+  <div class="row margin">
+    <div class="col-4">
       <div>
-        <img class="img-fluid player1" src="{{ heroes[30].images.sm }}">
+        <img class="img-fluid player1" src="{{ playersService.players[0].images.sm }}">
       </div>
-
-      <button>Attaque Physique</button>
-      <button>Attaque Magique</button>
       <br>
-      <button>Renforcement Physique</button>
-      <button>Renforcement Magique</button>
+      <div class="progress progressPlayer1">
+        <div class="progress-bar" role="progressbar" [ngStyle]="{'width': this.heroes.life + '%'}"></div>
+      </div>
+      <br>
+      <button class="btn btn-secondary">Attaque Physique</button>
+      <button class="btn btn-danger">Attaque Speciale</button>
     </div>
-    <img class="img-fluid vs" src="http://static.comicvine.com/uploads/original/13/135728/4521099-9366942388-44897.png">
-    <div>
+    <div class="col-4">
+      <img class="img-fluid vs" src="http://static.comicvine.com/uploads/original/13/135728/4521099-9366942388-44897.png">
+    </div>
+    <div class="col-4">
       <div>
-        <img class="img-fluid player2" src="{{ heroes[59].images.sm }}">
+        <img class="img-fluid player2" src="{{ playersService.players[1].images.sm }}">
       </div>
-      <button>Attaque Physique</button>
-      <button>Attaque Magique</button>
       <br>
-      <button>Renforcement Physique</button>
-      <button>Renforcement Magique</button>
+      <div class="progress progressPlayer2">
+        <div class="progress-bar" role="progressbar" [ngStyle]="{'width': this.heroes.life + '%'}" ></div>
+      </div>
+      <br>
+      <button class="btn btn-secondary">Attaque Physique</button>
+      <button class="btn btn-danger">Attaque Speciale</button>
     </div>
   </div>
 </div>

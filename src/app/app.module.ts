@@ -1,3 +1,4 @@
+import { PlayersService } from './players.service';
 // Module from Angular
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -13,6 +14,7 @@ import { ApiService } from './api.service';
 
 const appRoutes: Routes = [
   { path: '', component: TestComponent },
+  { path: 'fight', component: FightComponent },
 ];
 
 @NgModule({
@@ -27,7 +29,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
   ],
-  providers: [ApiService],
+  providers: [ApiService, PlayersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
