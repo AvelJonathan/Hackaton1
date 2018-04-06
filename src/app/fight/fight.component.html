@@ -1,16 +1,17 @@
 <div class="container-fluid superHero">
-  <div class="row margin">
+  <div class="row margin" *ngIf="playersService.players.length > 0">
     <div class="col-4">
       <div>
         <img class="img-fluid player1" src="{{ playersService.players[0].images.sm }}">
       </div>
       <br>
       <div class="progress progressPlayer1">
-        <div class="progress-bar" role="progressbar" [ngStyle]="{'width': this.heroes.life + '%'}"></div>
+
+        <div class="progress-bar" role="progressbar" [ngStyle]="{'width': playersService.players[0].life + '%'}">{{playersService.players[0].life + '%'}}</div>
       </div>
       <br>
-      <button class="btn btn-secondary">Attaque Physique</button>
-      <button class="btn btn-danger">Attaque Speciale</button>
+      <button (click)=atkPhyP1() class="btn btn-secondary">Attaque Physique</button>
+      <button (click)=atkSpeP1() class="btn btn-danger">Attaque Speciale</button>
     </div>
     <div class="col-4">
       <img class="img-fluid vs" src="http://static.comicvine.com/uploads/original/13/135728/4521099-9366942388-44897.png">
@@ -21,11 +22,12 @@
       </div>
       <br>
       <div class="progress progressPlayer2">
-        <div class="progress-bar" role="progressbar" [ngStyle]="{'width': this.heroes.life + '%'}" ></div>
+        <div class="progress-bar" role="progressbar" [ngStyle]="{'width': playersService.players[1].life + '%'}">{{playersService.players[1].life + '%'}}</div>
       </div>
       <br>
-      <button class="btn btn-secondary">Attaque Physique</button>
-      <button class="btn btn-danger">Attaque Speciale</button>
+      <button (click)=atkPhyP2() class="btn btn-secondary">Attaque Physique</button>
+      <button (click)=atkSpeP2() class="btn btn-danger">Attaque Speciale</button>
     </div>
+    <button class=" btn btn-secondary" routerLink="/" style="margin: auto;display: block; ">Fuir le combat</button>
   </div>
 </div>

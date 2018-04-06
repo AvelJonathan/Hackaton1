@@ -23,14 +23,15 @@ export class TestComponent implements OnInit {
   }
   getHero(param, player) {
     console.log(param);
+    this.heroes[param].life = 100;
     this.selectedPlayer[player] = this.heroes[param];
     console.log(this.selectedPlayer);
     this.playersService.players.push(this.heroes[param]);
     if (this.playersService.players.length === 2) {
       this.router.navigate(['fight']);
     }
-    this.heroes.life = 100;
-    console.log(this.heroes.life);
+    // this.heroes.life = 100;
+    // console.log(this.heroes.life);
     // return this.heroes[param].images.sm;
   }
   /*getPerso(param) {
