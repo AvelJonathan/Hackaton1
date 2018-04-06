@@ -1,9 +1,11 @@
 {
-  "name": "hackaton",
+  "name": "hackaton1",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
+    "ghpages": "sh deploy.sh",
+    "deploy" : "angular-cli-ghpages",
     "start": "ng serve",
     "build": "ng build --prod",
     "test": "ng test",
