@@ -8,7 +8,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { FightComponent } from './fight/fight.component';
-import { TesComponent } from './tes/tes.component';
 import { TestComponent } from './test/test.component';
 import { ApiService } from './api.service';
 
@@ -21,7 +20,6 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     FightComponent,
-    TesComponent,
     TestComponent
   ],
   imports: [
