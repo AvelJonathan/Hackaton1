@@ -4,18 +4,18 @@
 
       <!-- Colone heros de gauche Heros 1-6 -->
       <!-- Ligne 1 -->
-      <div class="col-4 fondHeros">
+      <div  class="col-4 fondHeros" *ngIf="heroes">
         <div class="row">
           <div class="col-4 ">
-            <img class="img-fluid" src="{{ heroes[2].images.sm }}">
+            <img (click)="getHero(2, 0)" class="img-fluid" src="{{ heroes[2].images.sm }}">
             <p>{{heroes[2].name}}</p>
           </div>
           <div class=" col-4">
-            <img class="img-fluid" src="{{ heroes[30].images.sm }}">
+            <img (click)="getHero(30, 0)" class="img-fluid " src="{{ heroes[30].images.sm }}">
             <p>{{heroes[30].name}}</p>
           </div>
           <div class="col-4">
-            <img class="img-fluid" src="{{ heroes[56].images.sm }}">
+            <img (click)="getHero(56, 0)" class="img-fluid" src="{{ heroes[56].images.sm }}">
             <p>{{heroes[56].name}}</p>
           </div>
         </div>
@@ -23,43 +23,44 @@
         <!-- Ligne 2 -->
         <div class="row ">
           <div class="col-4">
-            <img class="img-fluid" src="{{ heroes[191].images.sm }}">
+            <img (click)="getHero(191, 0)" class="img-fluid" src="{{ heroes[191].images.sm }}">
             <p>{{heroes[191].name}}</p>
           </div>
           <div class="col-4">
-            <img class="img-fluid" src="{{ heroes[476].images.sm }}">
+            <img (click)="getHero(476, 0)" class="img-fluid" src="{{ heroes[476].images.sm }}">
             <p>{{heroes[476].name}}</p>
           </div>
           <div class="col-4">
-            <img class="img-fluid" src="{{ heroes[201].images.sm }}">
+            <img (click)="getHero(201, 0)" class="img-fluid" src="{{ heroes[201].images.sm }}">
             <p>{{heroes[201].name}}</p>
           </div>
         </div>
       </div>
 
-      <!-- Colonne heros selectionner Joeur 1-->
+      <!-- Colonne heros selectionner Joueur 1-->
       <div class="col-4 fondJoueur">
-        <div class="row ">
-          <div class="col-12 ">
-            <p>HeroPlayer1</p>
+        <div class="row " *ngFor="let player of selectedPlayer">
+          <div class="col-12">
+              <img class="img-fluid" src="{{ player.images.sm }}">
+              <p>{{ player.name }}</p>  
           </div>
         </div>
       </div>
 
       <!-- Colonne Mechant droite 1-6 -->
       <!-- Ligne 1 -->
-      <div class="col-4 fondMechant">
+      <div class="col-4 fondMechant" *ngIf="heroes">
         <div class="row">
           <div class="col-4 ">
-            <img class="img-fluid" src="{{ heroes[35].images.sm }}">
+            <img (click)="getHero(35, 1)" class="img-fluid" src="{{ heroes[35].images.sm }}">
             <p>{{ heroes[35].name }}</p>
           </div>
           <div class="col-4 ">
-            <img class="img-fluid" src="{{ heroes[59].images.sm }}">
+            <img (click)="getHero(59, 1)" class="img-fluid" src="{{ heroes[59].images.sm }}">
             <p>{{ heroes[59].name }}</p>
           </div>
           <div class="col-4 ">
-            <img class="img-fluid" src="{{ heroes[69].images.sm }}">
+            <img (click)="getHero(69, 1)" class="img-fluid" src="{{ heroes[69].images.sm }}">
             <p>{{ heroes[69].name }}</p>
           </div>
         </div>
@@ -67,15 +68,15 @@
         <!-- Ligne 2 -->
         <div class="row">
           <div class="col-4 ">
-            <img class="img-fluid" src="{{ heroes[95].images.sm }}">
+            <img (click)="getHero(95, 1)" class="img-fluid" src="{{ heroes[95].images.sm }}">
             <p>{{ heroes[95].name }}</p>
           </div>
           <div class="col-4 ">
-            <img class="img-fluid" src="{{ heroes[115].images.sm }}">
+            <img (click)="getHero(115, 1)" class="img-fluid" src="{{ heroes[115].images.sm }}">
             <p>{{ heroes[115].name }}</p>
           </div>
           <div class="col-4 ">
-            <img class="img-fluid" src="{{ heroes[174].images.sm }}">
+            <img (click)="getHero(174, 1)" class="img-fluid" src="{{ heroes[174].images.sm }}">
             <p>{{ heroes[174].name }}</p>
           </div>
         </div>
@@ -83,19 +84,19 @@
 
 
       <!-- Colone heros de gauche Heros 7-12 -->
-      <div class="col-4 fondHeros">
+      <div class="col-4 fondHeros" *ngIf="heroes">
         <!-- Ligne-3 -->
         <div class="row ">
           <div class="col-4">
-            <img class="img-fluid" src="{{ heroes[17].images.sm }}">
+            <img (click)="getHero(17, 0)" class="img-fluid" src="{{ heroes[17].images.sm }}">
             <p>{{heroes[17].name}}</p>
           </div>
           <div class="col-4">
-            <img class="img-fluid" src="{{ heroes[26].images.sm }}">
+            <img (click)="getHero(26, 0)" class="img-fluid" src="{{ heroes[26].images.sm }}">
             <p>{{heroes[26].name}}</p>
           </div>
           <div class="col-4">
-            <img class="img-fluid" src="{{ heroes[132].images.sm }}">
+            <img (click)="getHero(132, 0)" class="img-fluid" src="{{ heroes[132].images.sm }}">
             <p>{{heroes[132].name}}</p>
           </div>
         </div>
@@ -103,15 +104,15 @@
         <!-- Ligne-4 -->
         <div class="row ">
           <div class="col-4">
-            <img class="img-fluid" src="{{ heroes[495].images.sm }}">
+            <img (click)="getHero(495, 0)" class="img-fluid " src="{{ heroes[495].images.sm }} ">
             <p>{{heroes[495].name}}</p>
           </div>
-          <div class="col-4">
-            <img class="img-fluid" src="{{ heroes[190].images.sm }}">
+          <div class="col-4 ">
+            <img (click)="getHero(190, 0)" class="img-fluid" src="{{ heroes[190].images.sm }}">
             <p>{{heroes[190].name}}</p>
           </div>
           <div class="col-4">
-            <img class="img-fluid" src="{{ heroes[219].images.sm }}">
+            <img (click)="getHero(219, 0)" class="img-fluid " src="{{ heroes[219].images.sm }} ">
             <p>{{heroes[219].name}}</p>
           </div>
         </div>
@@ -125,44 +126,42 @@
           </div>
         </div>
       </div>
-
       <!-- Colonne Mechant droite 7-12 -->
-      <div class="col-4 fondMechant">
+      <div class="col-4 fondMechant " *ngIf="heroes">
         <!-- Ligne 3 -->
-        <div class="row">
+        <div class="row ">
           <div class="col-4 ">
-            <img class="img-fluid" src="{{ heroes[268].images.sm }}">
+            <img (click)="getHero(268, 1)" class="img-fluid " src="{{ heroes[268].images.sm }} ">
             <p>{{ heroes[268].name }}</p>
           </div>
           <div class="col-4 ">
-            <img class="img-fluid" src="{{ heroes[307].images.sm }}">
+            <img (click)="getHero(307, 1)" class="img-fluid " src="{{ heroes[307].images.sm }} ">
             <p>{{ heroes[307].name }}</p>
           </div>
           <div class="col-4 ">
-            <img class="img-fluid" src="{{ heroes[529].images.sm }}">
+            <img (click)="getHero(529, 1)" class="img-fluid " src="{{ heroes[529].images.sm }} ">
             <p>{{ heroes[529].name }}</p>
           </div>
         </div>
-
         <!-- Ligne 4 -->
-        <div class="row">
+        <div class="row ">
           <div class="col-4 ">
-            <img class="img-fluid" src="{{ heroes[472].images.sm }}">
+            <img (click)="getHero(472, 1)" class="img-fluid " src="{{ heroes[472].images.sm }} ">
             <p>{{ heroes[472].name }}</p>
           </div>
           <div class="col-4 ">
-            <img class="img-fluid" src="{{ heroes[486].images.sm }}">
+            <img (click)="getHero(486, 1)" class="img-fluid " src="{{ heroes[486].images.sm }} ">
             <p>{{ heroes[486].name }}</p>
           </div>
           <div class="col-4 ">
-            <img class="img-fluid" src="{{ heroes[290].images.sm }}">
+            <img (click)="getHero(290, 1)" class="img-fluid " src="{{ heroes[290].images.sm }} ">
             <p>{{ heroes[290].name }}</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="buttonStart">
-    <button routerLink="/fight" style="margin: auto;display: block;">Lancer le combat !</button>
+  <div class="buttonStart ">
+    <button routerLink="/fight " style="margin: auto;display: block; ">Lancer le combat !</button>
   </div>
 </div>
