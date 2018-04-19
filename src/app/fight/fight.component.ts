@@ -14,6 +14,7 @@ export class FightComponent implements OnInit {
 
   heroes;
   health = '';
+  message = '';
   constructor(private http: HttpClient, public playersService: PlayersService, private router: Router) {
   }
   ngOnInit(): void {
