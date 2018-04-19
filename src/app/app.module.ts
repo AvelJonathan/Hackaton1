@@ -7,7 +7,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 // Module for Component
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 import { FightComponent } from './fight/fight.component';
 import { TestComponent } from './test/test.component';
 import { ApiService } from './api.service';
@@ -20,7 +19,6 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     FightComponent,
     TestComponent
   ],
